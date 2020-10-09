@@ -70,7 +70,7 @@ const Header = () => {
         event.preventDefault();
         try {
             const user = await axios.post(
-                "http://localhost:8000/userAccount/login",
+                "https://mm-ser.herokuapp.com/api/userAccount/login",
                 formLogin
             );
 
@@ -117,12 +117,12 @@ const Header = () => {
         event.preventDefault();
         try {
             const user = await axios.post(
-                "http://localhost:8000/userAccount/register",
+                "https://mm-ser.herokuapp.com/api/userAccount/register",
                 form
             );
             if (user.status === 200) {
                 // const verify = await axios.post(
-                //     "http://localhost:8000/verification/get-activation-email",
+                //     "https://mm-ser.herokuapp.com/api/verification/get-activation-email",
                 //     user.data.result._id
                 // );
                 console.log(user.data.result._id)
@@ -160,12 +160,12 @@ const Header = () => {
     };
 
     const handleGoogleLogin = () => {
-        const urlGoogleLogin = "http://localhost:8000/auth/google";
+        const urlGoogleLogin = "https://mm-ser.herokuapp.com/api/auth/google";
         window.location.replace(urlGoogleLogin);
     };
 
     const handleFacebookLogin = () => {
-        const urlFacebookLogin = "http://localhost:8000/auth/facebook";
+        const urlFacebookLogin = "https://mm-ser.herokuapp.com/api/auth/facebook";
         window.location.replace(urlFacebookLogin);
     };
 

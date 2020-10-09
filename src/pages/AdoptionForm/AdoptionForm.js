@@ -49,15 +49,15 @@ const AdoptionForm = () => {
     let id = userData.idUser._id;
 
     const fetchDataUser = async () => {
-        let result = await axios.get(`http://localhost:8000/users/${id}`); //endpoint
+        let result = await axios.get(`https://mm-ser.herokuapp.com/api/users/${id}`); //endpoint
         setUser(result.data.result);
     };
 
     const updateUser = () => {
-        return axios.put(`http://localhost:8000/users/${id}`, user);
+        return axios.put(`https://mm-ser.herokuapp.com/api/users/${id}`, user);
     };
     const createForm = () => {
-        return axios.post("http://localhost:8000/formRequest/create", {
+        return axios.post("https://mm-ser.herokuapp.com/api/formRequest/create", {
             idUser: user._id,
             idPet,
             reason,

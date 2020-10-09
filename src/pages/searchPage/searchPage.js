@@ -61,7 +61,7 @@ const SearchPage = () => {
     };
 
     const getFilter = () => {
-        const url = `http://localhost:8000/petdetails/?search=${search}`;
+        const url = `https://mm-ser.herokuapp.com/api/petdetails/?search=${search}`;
         axios
             .get(url)
             .then(function (response) {
@@ -80,7 +80,7 @@ const SearchPage = () => {
     };
 
     const getSearch = () => {
-        const url = `http://localhost:8000/petdetails/?search=${search}`;
+        const url = `https://mm-ser.herokuapp.com/api/petdetails/?search=${search}`;
         axios
             .get(url)
             .then(function (response) {

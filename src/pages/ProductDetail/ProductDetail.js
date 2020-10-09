@@ -29,7 +29,7 @@ const ProductDetail = (props) => {
         const getProduct = async () => {
             // setLoading(true);
             const response = await axios.get(
-                `http://localhost:8000/product/${id}`
+                `https://mm-ser.herokuapp.com/api/product/${id}`
             );
             setProduct(response.data.result);
             setProductImage(response.data.result.image[0].image);

@@ -22,7 +22,7 @@ const AccountSettings = ({ account }) => {
 
     const fetchData = async () => {
         let response = await axios.get(
-            `http://localhost:8000/userAccount/${userData.id}` //if let id=userData.id then ${id}
+            `https://mm-ser.herokuapp.com/api/userAccount/${userData.id}` //if let id=userData.id then ${id}
         ); //endpoint
         setEmail(response.data.result.email);
     };
@@ -30,7 +30,7 @@ const AccountSettings = ({ account }) => {
     const handleEditAccount = async (event) => {
         event.preventDefault();
         return axios
-            .put(`http://localhost:8000/userAccountEmail/${userData.id}`, form)
+            .put(`https://mm-ser.herokuapp.com/api/userAccountEmail/${userData.id}`, form)
             .then((result) => setEmail(result.data.result.email))
             .then(() => window.location.reload())
             .catch((err) => console.log(err));
@@ -40,7 +40,7 @@ const AccountSettings = ({ account }) => {
         event.preventDefault();
         return axios
             .put(
-                `http://localhost:8000/userAccountPassword/${userData.id}`,
+                `https://mm-ser.herokuapp.com/api/userAccountPassword/${userData.id}`,
                 password
             )
             .then((result) => {

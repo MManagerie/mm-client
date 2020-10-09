@@ -24,7 +24,7 @@ const AllProfile = () => {
     let token = localStorage.getItem("menagerie");
 
     const profile = async () => {
-        const url = `http://localhost:8000/userAccount/${userLogin.id}`;
+        const url = `https://mm-ser.herokuapp.com/api/userAccount/${userLogin.id}`;
         await axios
             .get(url)
             .then(function (response) {

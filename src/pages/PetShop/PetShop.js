@@ -59,63 +59,63 @@ const PetShop = () => {
 
     const getSort = async () => {
         if (sort === "newest" && filter === "all") {
-            let url = `http://localhost:8000/product`;
+            let url = `https://mm-ser.herokuapp.com/api/product`;
             const response = await axios.get(url)
             setProducts(response.data.result)
         } else if (sort === "newest" && filter === "catfood") {
-            let url = `http://localhost:8000/product/filter?search=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/product/filter?search=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.result)
         } else if (sort === "newest" && filter === "dogfood") {
-            let url = `http://localhost:8000/product/filter?search=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/product/filter?search=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.result)
         } else if (sort === "newest" && filter === "acc") {
-            let url = `http://localhost:8000/product/filter?search=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/product/filter?search=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.result)
         } else if (sort === "newest" && filter === "vitdrugs") {
-            let url = `http://localhost:8000/product/filter?search=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/product/filter?search=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.result)
         } else if (sort === "price-desc" && filter === "all") {
-            let url = `http://localhost:8000/sortProductHighToLow`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductHighToLow`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         } else if (sort === "price-desc" && filter === "catfood") {
-            let url = `http://localhost:8000/sortProductHighToLow?filter=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductHighToLow?filter=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         } else if (sort === "price-desc" && filter === "dogfood") {
-            let url = `http://localhost:8000/sortProductHighToLow?filter=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductHighToLow?filter=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         } else if (sort === "price-desc" && filter === "acc") {
-            let url = `http://localhost:8000/sortProductHighToLow?filter=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductHighToLow?filter=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         } else if (sort === "price-desc" && filter === "vitdrugs") {
-            let url = `http://localhost:8000/sortProductHighToLow?filter=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductHighToLow?filter=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         } else if (sort === "price-asc" && filter === "all") {
-            let url = `http://localhost:8000/sortProductLowToHigh`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductLowToHigh`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         } else if (sort === "price-asc" && filter === "catfood") {
-            let url = `http://localhost:8000/sortProductLowToHigh?filter=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductLowToHigh?filter=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         } else if (sort === "price-asc" && filter === "dogfood") {
-            let url = `http://localhost:8000/sortProductLowToHigh?filter=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductLowToHigh?filter=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         } else if (sort === "price-asc" && filter === "acc") {
-            let url = `http://localhost:8000/sortProductLowToHigh?filter=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductLowToHigh?filter=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         } else if (sort === "price-asc" && filter === "vitdrugs") {
-            let url = `http://localhost:8000/sortProductLowToHigh?filter=${filter}`;
+            let url = `https://mm-ser.herokuapp.com/api/sortProductLowToHigh?filter=${filter}`;
             const response = await axios.get(url)
             setProducts(response.data.sorted)
         }
