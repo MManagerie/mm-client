@@ -8,17 +8,23 @@ import { listInfo, mainOne, mainBody } from "./StatusRequest.styles";
 const StatusRequest = () => {
     const [statusRequest, setStatusRequest] = useState([]);
     const [, setErrorMessage] = useState();
-
-    useEffect(() => {
-        const url = "https://mm-ser.herokuapp.com/api/petUpForAdoption";
-        axios
-            .get(url)
-            .then(function (result) {
+    
+    const getPetUpForAdoption = async () => {
+        try {
+            const url = "https://mm-ser.herokuapp.com/api/petUpForAdoption";
+            let result = await axios.get(url)
+            if(result.status === 200){
                 setStatusRequest(result.data.result);
-            })
-            .catch(function (error) {
-                setErrorMessage(error.message);
-            });
+            } 
+        }
+        catch(err){
+            console.log(err)
+            setErrorMessage(err.message)
+        }
+        
+    }
+    useEffect(() => {
+       getPetUpForAdoption()
     }, [setErrorMessage]);
 
     return (
